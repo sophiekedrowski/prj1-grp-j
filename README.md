@@ -1,4 +1,4 @@
-# prj1-grp-j
+# Campsite Finder
 
 ## As a camper I want an app that I can search arears for National campgrounds and chose which one to stay at by what is available with in the park.
       WHEN: I select a campground
