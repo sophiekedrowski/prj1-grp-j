@@ -1,8 +1,14 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+body {
+  min-height: 100%;
+}
+
 body,
 html {
   height: 100%;
 }
+
 .bg {
   /* The image used */
   background-image: url("Images/Campsite.jpeg");
