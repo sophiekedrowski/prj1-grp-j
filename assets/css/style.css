@@ -11,11 +11,12 @@ html {
 
 .bg {
   /* The image used */
-  background-image: url("Images/Campsite.jpeg");
+  background-image: url("./Images/Campsite.jpeg");
 
   /* Full height */
   height: 50%;
   width: 100%;
+ 
 
   /* Center and scale the image nicely */
   background-position: center;
