@@ -40,6 +40,8 @@ document.getElementById("searchBtn").addEventListener("click", function () {
     allParks.then((allParkData) => {
      var info = combineparkandgeo(loc, allParkData);
      localStorage.setItem("info", JSON.stringify(info))
+    window.location.href='search-results.html';
+
     })
   })
 })
@@ -65,10 +67,11 @@ function combineparkandgeo(location, parksData) {
   for (let i = 0; i < parksData.length; i++) {
     var parkData = parksData[i];
     var actualDistance = distance(location.lat, location.lon, parkData.lat, parkData.lon);
+    var roundedDistance = Math.round(actualDistance)
     // console.log(actualDistance)
     if (actualDistance <= 50) {
       console.log(actualDistance, parkData.fullName)
-      parksWithinRadius.push({ miles: actualDistance, parkName: parkData.fullName, parkCode: parkData.parkCode });
+      parksWithinRadius.push({ miles: roundedDistance, parkName: parkData.fullName, parkCode: parkData.parkCode });
     }
   }
   return parksWithinRadius;
