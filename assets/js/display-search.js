@@ -52,7 +52,7 @@ else {
                 for (let i = 0; i < data.data.length; i++) {
                     var campsiteInfo = data.data[i];
                     var campsitesData = campsitesData.appendChild(document.createElement("li"))
-                    campsitesData.innerHTML =campsiteInfo.name + "<br/>" +  "<strong>\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 Description: </strong>"  + campsiteInfo.description + "<br/>" + campsiteInfo.name+ "<br/>" + "<a href='"+campsiteInfo.url+"'>Click Here to go to campsites webpage</a>" ;
+                    campsitesData.innerHTML =campsiteInfo.name + "<br/>" +  "<strong> Description: </strong>"  + campsiteInfo.description + "<br/>" + campsiteInfo.name+ "<br/>" + "<a href='"+campsiteInfo.url+"'>Click Here to go to campsites webpage</a>" ;
                 }
             }
         })
