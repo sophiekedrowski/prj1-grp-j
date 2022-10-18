@@ -8,7 +8,9 @@ body,
 html {
   height: 100%;
 }
-
+.title {
+  background-image: url("./Images/us-national-parks-map-max.jpg");
+}
 .bg {
   /* The image used */
   background-image: url("./Images/Campsite.jpeg");
