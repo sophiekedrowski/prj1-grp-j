@@ -30,7 +30,6 @@ function searchApi(userInput) {
     });
 }
 
-
 var allParks = find_parks(baseUrl, parkCode, limit, apiKey)
 document.getElementById("searchBtn").addEventListener("click", function () {
   var userCityInput = document.getElementById("UserInput").value
@@ -46,7 +45,6 @@ document.getElementById("searchBtn").addEventListener("click", function () {
     })
   })
 })
-
 
 function find_parks(baseUrl, parkCode, limit, apiKey) {
   return fetch(`${baseUrl}parkCode=${parkCode}&limit=${limit}&api_key=${apiKey}`
@@ -83,9 +81,6 @@ function combineparkandgeo(location, parksData) {
 function parkLocalStorage(parkInfo) {
 localStorage.setItem("parkInfo", parkInfo)
 }
-
-
-
 
 function distance(lat1, lon1, lat2, lon2) {
   // The math module contains a function
