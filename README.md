@@ -21,9 +21,10 @@
 The Campsite Finder may be found at https://sophiekedrowski.github.io/prj1-grp-j/
 
 
-    ```md
+<img width="1207" alt="Demo" src='assets\gif\Untitled_ Oct 18, 2022 4_43 PM.gif'>
+
     ![alt screenshot](assets/images/screenshot.png)
-    ```
+
 
 ## Credits
 
