@@ -34,6 +34,7 @@ function searchApi(userInput) {
 var allParks = find_parks(baseUrl, parkCode, limit, apiKey)
 document.getElementById("searchBtn").addEventListener("click", function () {
   var userCityInput = document.getElementById("UserInput").value
+  
   var location = searchApi(userCityInput)
   location.then((loc) => {
     console.log(loc)
@@ -41,6 +42,7 @@ document.getElementById("searchBtn").addEventListener("click", function () {
     var info = combineparkandgeo(loc, allParkData);
     localStorage.setItem("info", JSON.stringify(info))
     window.location.href='search-results.html';
+    console.log(searchRad);
     })
   })
 })
@@ -63,15 +65,17 @@ function find_parks(baseUrl, parkCode, limit, apiKey) {
 
 function combineparkandgeo(location, parksData) {
   var parksWithinRadius = []
+  var searchRad = document.getElementById("rSearch").value
   for (let i = 0; i < parksData.length; i++) {
     var parkData = parksData[i];
     var actualDistance = distance(location.lat, location.lon, parkData.lat, parkData.lon);
     var roundedDistance = Math.round(actualDistance)
     // console.log(actualDistance)
-    if (actualDistance <= 300) {
+    if (actualDistance <= searchRad) {
       console.log(actualDistance, parkData.fullName)
       parksWithinRadius.push({ miles: roundedDistance, parkName: parkData.fullName, parkCode: parkData.parkCode });
     }
+    
   }
   return parksWithinRadius;
 }
