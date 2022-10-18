@@ -33,7 +33,6 @@ function searchApi(userInput) {
 var allParks = find_parks(baseUrl, parkCode, limit, apiKey)
 document.getElementById("searchBtn").addEventListener("click", function () {
   var userCityInput = document.getElementById("UserInput").value
-  
   var location = searchApi(userCityInput)
   location.then((loc) => {
     console.log(loc)
@@ -103,6 +102,8 @@ function distance(lat1, lon1, lat2, lon2) {
   let r = 3956;
   return (c * r);
 }
-
-
+document.getElementById("rSearch").onload = defaultRad();
+function defaultRad() {
+  document.getElementById("rSearch").value = "100";
+}
 
