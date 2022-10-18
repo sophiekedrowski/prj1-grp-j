@@ -36,18 +36,18 @@ else {
             }
             else {
 
-                var campsiteDiv = document.getElementById("campsites")
+                var campsiteDiv = document.getElementById("campsites1")
                 for (let i = 0; i < data.data.length; i++) {
                     var campsiteInfo = data.data[i];
                     var campsitesDiv = campsiteDiv.appendChild(document.createElement("li"))
                     campsitesDiv.innerHTML = "Campsite Name: " + campsiteInfo.name + " " + " Total Sites: " + campsiteInfo.campsites.totalSites
                 }
-                var campsiteUl = document.getElementById("campsites1")
-                for (let i = 0; i < data.data.length; i++) {
-                    var campsiteInfo = data.data[i];
-                    var campsiteUl = campsiteUl.appendChild(document.createElement("li"))
-                    campsiteUl.innerHTML = "Campsite: " + campsiteInfo.name + " " + " Total Sites: " + campsiteInfo.campsites.totalSites
-                }
+                // var campsiteUl = document.getElementById("campsites1")
+                // for (let i = 0; i < data.data.length; i++) {
+                //     var campsiteInfo = data.data[i];
+                //     var campsiteUl = campsiteUl.appendChild(document.createElement("li"))
+                //     campsiteUl.innerHTML = "Campsite: " + campsiteInfo.name + " " + " Total Sites: " + campsiteInfo.campsites.totalSites
+                // }
                 var campsitesData = document.getElementById("campsitesData")
                 for (let i = 0; i < data.data.length; i++) {
                     var campsiteInfo = data.data[i];
